@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="mysql数据导出及发邮件" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Configuration" enabled="true">
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="checkQuery">Select 1</stringProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="dataSource">192.168.102.65</stringProp>
+        <stringProp name="dbUrl">jdbc:mysql://192.168.102.65:3306/jmeter</stringProp>
+        <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="password">douhaichao</stringProp>
+        <stringProp name="poolMax">10</stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <stringProp name="username">douhaichao</stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="导出excel&amp;发邮件--common" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1507542175000</longProp>
+        <longProp name="ThreadGroup.end_time">1507542175000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler_Sql_order&amp;register" enabled="false">
+          <stringProp name="TestPlan.comments">curdate()</stringProp>
+          <stringProp name="BeanShellSampler.query">import com.zhtx.common.ExcelHelper;
+ExcelHelper eh=new ExcelHelper();
+eh.ExportExcel(&quot;jdbc:mysql://192.168.102.65:3306/jmeter&quot;,&quot;douhaichao&quot;,&quot;douhaichao&quot;,&quot;select platform as &apos;平台&apos;,registerSource as &apos;注册来源&apos;,username as &apos;用户名&apos;,pwd as &apos;密码&apos; from register where date(createtime) =curdate()&quot;,&quot;D:\\apache-jmeter-3.1\\html\\app账户注册.xls&quot;);
+
+eh.ExportExcel(&quot;jdbc:mysql://192.168.102.65:3306/jmeter&quot;,&quot;douhaichao&quot;,&quot;douhaichao&quot;,&quot;SELECT 	GoodsType AS &apos;商品类型&apos;, 	orderSource AS &apos;订单来源&apos;, 	orderNo AS &apos;订单号&apos;, 	isPay AS &apos;支付类型&apos;, 	goodsPrice AS &apos;商品单价&apos;, 	actualPay AS &apos;实付金额&apos;, 	goodsCommission AS &apos;商品佣金比例&apos;, 	mercenaryGoodsCommission AS &apos;佣兵商品提成比例&apos;, 	couponsType AS &apos;优惠券类型&apos;, 	couponsValue AS &apos;优惠券面值&apos;, 	redPayMoney AS &apos;红包使用金额&apos;, 	PayStyle AS &apos;支付方式&apos;, 	csBeforeAccount AS &apos;cs下单前余额&apos;, 	csAfterAccount AS &apos;cs确认收货后余额&apos;, 	csPay AS &apos;超市收支记录&apos;, 	ghsBeforeAccount AS &apos;ghs下单前余额&apos;, 	ghsAfterAccount AS &apos;ghs确认收货余额&apos;, 	ywyThisMoth1 AS &apos;下单前本月预计收入&apos;, 	ywyFreeAccount1 AS &apos;下单前不可提现金额&apos;, 	ywyDeposit1 AS &apos;下单前可提现金额&apos;, 	ywyPreCommission AS &apos;业务员预计收入&apos;, 	ywyThisMoth2 AS &apos;本月预计收入&apos;, 	ywyFreeAccount2 AS &apos;不可提现金额&apos;, 	ywyDeposit2 AS &apos;可提现金额&apos;, 	ywyCommission AS &apos;业务员提成收入&apos;, 	ywyThisMoth3 AS &apos;确认收货本月预计收入&apos;, 	ywyFreeAccount3 AS &apos;确认收货不可提现金额&apos;, 	ywyDeposit3 AS &apos;确认收货可提现金额&apos;, 	ghsyongjin AS &apos;ghs佣金支出&apos;, 	ghsMercenaryPay AS &apos;ghs佣兵服务费支出&apos;, 	ghsInCoupons AS &apos;供货商收入券金额&apos;, 	ghsOrderAccount AS &apos;ghs进货单金额&apos;, 	fwzOutYBTC AS &apos;fwz佣兵提成支出&apos;, 	fwzOutPayZB AS &apos;fwz商品佣金支出&apos;, 	fwzInYBFWF AS &apos;fwz佣兵服务费收入&apos;, 	fwzOutYJ AS &apos;fwz佣金支出&apos;, 	fwzInYJ AS &apos;fwz佣金收入&apos;, 	zbInYBPTF AS &apos;总部佣兵平台费&apos;, 	zbyongjin AS &apos;总部收佣金额&apos; FROM 	richang where GoodsType=&apos;老商品&apos; and date(createtime) =curdate()&quot;,&quot;D:\\apache-jmeter-3.1\\html\\老商品订单收支.xls&quot;);
+
+
+
+
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler_Email" enabled="false">
+          <stringProp name="BeanShellSampler.query">import com.zhtx.common.MailHelper;
+MailHelper.sendMail(&quot;dev_mall.list@zhanghetianxia.com&quot;,&quot;mayanfei@zhanghetianxia.com;baochen@zhanghetianxia.com&quot;,&quot;${__time(yyyy-MM-dd)}PC&amp;APP超市&amp;供货商系统巡检报告&quot;,&quot;hi，all: &lt;br/&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;${__time(yyyy-MM-dd)}线上巡检报告见附件，请查收！&quot;,&quot;D:/apache-jmeter-3.1/html&quot;);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler_myself" enabled="false">
+          <stringProp name="BeanShellSampler.query">import com.zhtx.common.MailHelper;
+MailHelper.sendMail(&quot;wanghaihong@zhanghetianxia.com&quot;,&quot;wanghaihong@zhanghetianxia.com&quot;,&quot;${__time(yyyy-MM-dd)}PC&amp;APP超市&amp;供货商系统巡检报告&quot;,&quot;hi，all: &lt;br/&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;${__time(yyyy-MM-dd)}线上巡检报告见附件，请查收！&quot;,&quot;D:/apache-jmeter-3.1/html&quot;);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="Java请求" enabled="true">
+          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="fileName" elementType="Argument">
+                <stringProp name="Argument.name">fileName</stringProp>
+                <stringProp name="Argument.value">D:\\11.txt</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="responseValue" elementType="Argument">
+                <stringProp name="Argument.name">responseValue</stringProp>
+                <stringProp name="Argument.value">11</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="classname">com.huban.redis.operates.SaveResponse</stringProp>
+        </JavaSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
