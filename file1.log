@@ -1,0 +1,9 @@
+
+init:
+   [delete] Deleting D:\apache-jmeter-3.1\jtl\hubanDetailsReport{time}.jtl
+   [delete] Deleting directory D:\apache-jmeter-3.1\TestResults
+    [mkdir] Created dir: D:\apache-jmeter-3.1\TestResults
+
+test:
+   [jmeter] Executing test plan: D:\apache-jmeter-3.1\huban_jmx\online\onlineAPP用户注册--修理厂0531.jmx ==> D:\apache-jmeter-3.1\jtl\hubanDetailsReport{time}.jtl
+   [jmeter] Writing log file to: D:\apache-jmeter-3.1\bin\jmeter.log

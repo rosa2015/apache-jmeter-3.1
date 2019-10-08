@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+  
+<project name="huban" default="build" basedir="."> 
+		<tstamp>   
+        <format property="date" pattern="yyyy/MM/dd kk:mm:ss"/>
+		<format property="time" pattern="yyyy-MM-dd"/>
+		<!--kk是24小时制，KK是12小时制-->		
+		</tstamp> 
+	  
+		<property name="jmeter.home" value="D:/apache-jmeter-3.1" />
+		<property name="report.title" value="Jmeter_hubanAPITestReport"/>
+			
+    <!-- jmeter生成jtl格式的结果报告的路径-->  
+		<property name="jtl.dir" value="${basedir}/jtl" />  
+    <!-- jmeter生成html格式的结果报告的路径-->  
+		<property name="html.dir" value="${basedir}/html" />  
+    <!-- 生成的报告的前缀-->
+    <!-- 生成的报告的名称--> 	
+		<property name="ReportName" value="hubanDetailsReport" />
+		<property name="ReportName2" value="hubanSummaryReport" />
+		
+    	
+		<property name="jtlName" value="${jtl.dir}/${ReportName}${time}.jtl" />  
+		<property name="htmlName" value="${html.dir}/${ReportName}${time}.html" />
+		<property name="htmlName2" value="${html.dir}/${ReportName2}${time}.html" />
+		<property name="zipname" value="日常${time}.zip"/>
+		<property name="backdir" value="${jmeter.home}/backup"/>
+
+
+		<!--xslt.classpath依赖包位置-->
+		<property name="lib.home" value="${jmeter.home}/lib"/>
+		<!--jmx文件存放位置-->
+		<property name="jmxFile" value="${jmeter.home}/huban_jmx"/>
+		
+		<path id="xslt.classpath">
+			<fileset dir="${lib.home}" includes="xalan*.jar"/>     
+			<fileset dir="${lib.home}" includes="serializer*.jar"/>
+		</path>
+	
+	<!--项目初始化设置-->
+    <target name="init" description="init" >
+	<!--删除jtl文件夹下生成的所有文件及文件夹包括空目录，但不删除根目录-->
+	    <delete verbose="true" includeemptydirs="true" >
+	        <fileset dir="${jtl.dir}" >
+			    <include name="**/*" />
+		    </fileset>
+	     </delete>
+		 <!--删除html文件夹下生成的所有文件及文件夹包括空目录，但不删除根目录-->
+	    <delete>
+	        <fileset dir="${html.dir}">
+			    <include name="**/*"/>
+		    </fileset>
+	    </delete>
+		<delete dir="${jmeter.home}/TestResults"/>
+		<mkdir dir="${jmeter.home}/TestResults"/>
+	</target>
+	
+	 <!--执行jmeter脚本--> 
+    <target name="test1" depends="init">  
+        <taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" />  
+		
+        <jmeter jmeterhome="${jmeter.home}" resultlog="${jtlName}">  
+            <!-- 声明要运行的脚本。"*.jmx"指包含此目录下的所有jmeter脚本-->  
+            <testplans dir="${jmxFile}/online" includes="onlinePC商品模块--经销商0623.jmx" />
+			<!--声明生成的jtl文件是xml格式，否则会报错 -->
+            <property name="jmeter.save.saveservice.output_format" value="xml"/>			
+        </jmeter>  
+    </target>	
+	<!--jmeter报告-->
+    <target name="report" depends="test1" >   
+		 <xslt 
+		      classpathref="xslt.classpath"
+			  force="true"
+			  in="${jtlName}"  
+              out="${htmlName}"  
+			  style="${jmeter.home}/extras/jmeter.results.shanhe.me.xsl">
+			  <param name="titleReport" expression="${report.title}"/>
+              <param name="dateReport" expression="${date}"/>			  
+         </xslt>
+		 <xslt 
+		      classpathref="xslt.classpath"
+			  force="true"
+			  in="${jtlName}"  
+              out="${htmlName2}"
+              style="${jmeter.home}/extras/jmeter-results-detail-report_21.xsl">
+			  <param name="titleReport" expression="${report.title}"/>
+              <param name="dateReport" expression="${date}"/>			  
+         </xslt>
+        <!-- 因为上面生成报告的时候，不会将相关的图片也一起拷贝至目标目录，所以，需要手动拷贝 -->  
+        <copy todir="${html.dir}">  
+            <fileset dir="${jmeter.home}/extras">  
+                <include name="collapse.png" />  
+                <include name="expand.png" />  
+            </fileset>  
+        </copy>  
+    </target>
+ 
+
+     
+	
+	
+      
+   	
+</project>  
