@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="huban01" default="all" basedir=".">
+<property file="user.properties"/>
+<target name="all">
+   <ant antfile="${file1}" dir="." output="file1.log"/>
+   <ant antfile="${file2}" dir="."/>
+</target>
+</project>
