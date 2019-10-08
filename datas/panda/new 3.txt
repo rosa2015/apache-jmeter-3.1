@@ -1,0 +1,7 @@
+{usersHistoryProducts( 	packageName: "${packageName}",    channelKey: "${channelKey}",  version: "${version}", 	platform:"${platform}", 	deviceToken:"${deviceToken}", 
+   uid:"${uid}",type:"${type}")
+{
+productCode 	title 	logo 	banner 	accessTimes 	directJump 	singleTag 	applyCondition 	label 	spreadExplain 	productIntroduction 	applyFlow 	repayExplain 	overdueExplain 	earlyRepayExplain 	creditExpiryDate 	maxBorrowAmt 	minBorrowAmt 	loanTermUnit 	loanTerm 	maxLoanTerm 	minLoanTerm 	overduePenaltiesFee 	overdueManageFee 	overdueLateFee 	supportExtension 	gracePeriod 	dayRate 	loanTerms 	loanTermType 	sort   status
+}
+
+}

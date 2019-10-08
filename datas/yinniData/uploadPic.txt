@@ -1,0 +1,11 @@
+idCard,0
+idCard,1
+liveness,0
+liveness,1
+liveness,2
+signature,0
+extMsg,taxCardImage
+extMsg,healthInsurance
+extMsg,familyCard
+extMsg,bankBill
+extMsg,business

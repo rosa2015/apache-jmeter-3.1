@@ -1,0 +1,5 @@
+extMsg,taxCardImage
+extMsg,healthInsurance
+extMsg,familyCard
+extMsg,bankBill
+extMsg,business

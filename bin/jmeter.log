@@ -1,0 +1,431 @@
+2018/06/26 16:45:56 INFO  - jmeter.util.JMeterUtils: Setting Locale to zh_CN 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: Loading user properties from: D:\apache-jmeter-3.1\bin\user.properties 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: Loading system properties from: D:\apache-jmeter-3.1\bin\system.properties 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: Setting JMeter property: jmeter.save.saveservice.output_format=xml 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: Copyright (c) 1998-2016 The Apache Software Foundation 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: Version 3.1 r1770033 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: java.version=1.8.0_162 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: os.name=Windows 10 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: os.arch=amd64 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: os.version=10.0 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: file.encoding=UTF8 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: Max memory     =1900019712 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: Available Processors =8 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: Default Locale=中文 (中国) 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: JMeter  Locale=中文 (中国) 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: JMeterHome=D:\apache-jmeter-3.1 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: user.dir  =D:\apache-jmeter-3.1\bin 
+2018/06/26 16:45:56 INFO  - jmeter.JMeter: PWD       =D:\apache-jmeter-3.1\bin 
+2018/06/26 16:46:15 INFO  - jmeter.JMeter: IP: 169.254.115.89 Name: whh FullName: whh 
+2018/06/26 16:46:15 INFO  - jmeter.services.FileServer: Default base='D:\apache-jmeter-3.1\bin' 
+2018/06/26 16:46:15 INFO  - jmeter.services.FileServer: Set new base='D:\apache-jmeter-3.1\huban_jmx\online' 
+2018/06/26 16:46:16 INFO  - jmeter.save.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2 
+2018/06/26 16:46:16 INFO  - jmeter.save.SaveService: Using SaveService properties file encoding UTF-8 
+2018/06/26 16:46:16 INFO  - jmeter.save.SaveService: Using SaveService properties version 3.1 
+2018/06/26 16:46:16 INFO  - jmeter.save.SaveService: All converter versions present and correct 
+2018/06/26 16:46:16 INFO  - jmeter.save.SaveService: Loading file: D:\apache-jmeter-3.1\huban_jmx\online\onlinePC商品模块--经销商0623.jmx 
+2018/06/26 16:46:16 INFO  - jmeter.protocol.http.control.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_ 
+2018/06/26 16:46:16 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2018/06/26 16:46:16 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2018/06/26 16:46:16 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2018/06/26 16:46:16 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2018/06/26 16:46:16 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser 
+2018/06/26 16:46:16 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser 
+2018/06/26 16:46:16 INFO  - jmeter.JMeter: Creating summariser <summary> 
+2018/06/26 16:46:16 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2018/06/26 16:46:16 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2018/06/26 16:46:16 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2018/06/26 16:46:16 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must contain the string: '.functions.' 
+2018/06/26 16:46:16 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must not contain the string: '.gui.' 
+2018/06/26 16:46:16 INFO  - jmeter.JMeter: 正在运行的测试 (1530002776541) 
+2018/06/26 16:46:16 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : 线程组 
+2018/06/26 16:46:16 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group 线程组. 
+2018/06/26 16:46:16 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2018/06/26 16:46:16 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2018/06/26 16:46:16 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2018/06/26 16:46:16 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2018/06/26 16:46:16 INFO  - jmeter.threads.JMeterThread: Thread started: 线程组 1-1 
+2018/06/26 16:46:16 INFO  - jmeter.services.FileServer: Stored: D:\apache-jmeter-3.1\datas\vin.dat 
+2018/06/26 16:46:16 INFO  - jmeter.protocol.http.sampler.HTTPHCAbstractImpl: Local host = whh 
+2018/06/26 16:46:16 INFO  - jmeter.protocol.http.sampler.HTTPHC4Impl: HTTP request retry count = 0 
+2018/06/26 16:46:16 INFO  - jmeter.samplers.SampleResult: Note: Sample TimeStamps are START times 
+2018/06/26 16:46:16 INFO  - jmeter.samplers.SampleResult: sampleresult.default.encoding is set to utf-8 
+2018/06/26 16:46:16 INFO  - jmeter.samplers.SampleResult: sampleresult.useNanoTime=true 
+2018/06/26 16:46:16 INFO  - jmeter.samplers.SampleResult: sampleresult.nanoThreadSleep=5000 
+2018/06/26 16:46:16 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:16 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:16 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:16 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:16 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:16 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:16 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:16 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:16 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+1G1BL52P7TR115520; 	} else{ 	Fa . . . '' Encountered "G1BL52P7TR115520" at line 3, column 33.
+ 
+2018/06/26 16:46:17 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+1G1BL52P7TR115520; 	} else{ 	Fa . . . '' Encountered "G1BL52P7TR115520" at line 3, column 33.
+ 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:17 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5tdyz3dc5hs899381; 	} else{ 	Fa . . . '' Encountered "tdyz3dc5hs899381" at line 3, column 33.
+ 
+2018/06/26 16:46:18 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5tdyz3dc5hs899381; 	} else{ 	Fa . . . '' Encountered "tdyz3dc5hs899381" at line 3, column 33.
+ 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5tddw5g13as028644; 	} else{ 	Fa . . . '' Encountered "tddw5g13as028644" at line 3, column 33.
+ 
+2018/06/26 16:46:18 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5tddw5g13as028644; 	} else{ 	Fa . . . '' Encountered "tddw5g13as028644" at line 3, column 33.
+ 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:18 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:19 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5TDDW5G14AS025994; 	} else{ 	Fa . . . '' Encountered "TDDW5G14AS025994" at line 3, column 33.
+ 
+2018/06/26 16:46:20 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5TDDW5G14AS025994; 	} else{ 	Fa . . . '' Encountered "TDDW5G14AS025994" at line 3, column 33.
+ 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+1c4rjfag7cc117208; 	} else{ 	Fa . . . '' Encountered "c4rjfag7cc117208" at line 3, column 33.
+ 
+2018/06/26 16:46:20 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+1c4rjfag7cc117208; 	} else{ 	Fa . . . '' Encountered "c4rjfag7cc117208" at line 3, column 33.
+ 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5TDDW5G133S050452; 	} else{ 	Fa . . . '' Encountered "TDDW5G133S050452" at line 3, column 33.
+ 
+2018/06/26 16:46:20 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5TDDW5G133S050452; 	} else{ 	Fa . . . '' Encountered "TDDW5G133S050452" at line 3, column 33.
+ 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:20 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5temu52n98z582509; 	} else{ 	Fa . . . '' Encountered "temu52n98z582509" at line 3, column 33.
+ 
+2018/06/26 16:46:21 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5temu52n98z582509; 	} else{ 	Fa . . . '' Encountered "temu52n98z582509" at line 3, column 33.
+ 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:21 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5tdjk3dc1fs109271; 	} else{ 	Fa . . . '' Encountered "tdjk3dc1fs109271" at line 3, column 33.
+ 
+2018/06/26 16:46:22 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5tdjk3dc1fs109271; 	} else{ 	Fa . . . '' Encountered "tdjk3dc1fs109271" at line 3, column 33.
+ 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:22 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5TDBT48A22S128583; 	} else{ 	Fa . . . '' Encountered "TDBT48A22S128583" at line 3, column 33.
+ 
+2018/06/26 16:46:23 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	In file: inline evaluation of: ``if(0!=1){ 	Failure=true; 	FailureMessage="查询失败！"+5TDBT48A22S128583; 	} else{ 	Fa . . . '' Encountered "TDBT48A22S128583" at line 3, column 33.
+ 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	Parse error at line 3, column 32 : Error or number too big for integer type: 13556678888886554 
+2018/06/26 16:46:23 WARN  - jmeter.assertions.BeanShellAssertion: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Parse error at line 3, column 32 : Error or number too big for integer type: 13556678888886554 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:23 INFO  - jmeter.util.BeanShellTestElement: 0 
+2018/06/26 16:46:24 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:24 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:24 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:24 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:24 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:24 INFO  - jmeter.util.BeanShellTestElement: 1 
+2018/06/26 16:46:24 INFO  - jmeter.threads.JMeterThread: Thread is done: 线程组 1-1 
+2018/06/26 16:46:24 INFO  - jmeter.threads.JMeterThread: Thread finished: 线程组 1-1 
+2018/06/26 16:46:24 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2018/06/26 16:46:24 INFO  - jmeter.services.FileServer: Close: D:\apache-jmeter-3.1\datas\vin.dat 
+2018/06/26 16:46:24 INFO  - jmeter.reporters.Summariser: summary =    333 in 00:00:08 =   44.1/s Avg:    18 Min:     3 Max:    99 Err:   153 (45.95%) 

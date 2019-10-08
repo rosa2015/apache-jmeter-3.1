@@ -1,0 +1,8 @@
+gender,
+live_time,
+r_relation,
+o_relation,
+industry,
+bank_code,
+work_year,
+work_wages

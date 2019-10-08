@@ -1,0 +1,4 @@
+idCard,
+liveness,
+signature,
+extMsg

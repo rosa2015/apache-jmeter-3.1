@@ -1,0 +1,16 @@
+{userCouponsDataList(
+                        channelKey: "${channelKey}",
+                        packageName: "${packageName}",
+                        version: "${version}",
+                        platform:"${platform}",
+                        deviceToken:"${deviceToken}",
+                        uid:"${uid}"
+                    ){
+                        title
+                        code
+                        discountedPrices
+                        expireTime
+                        usageStatus
+                        usageTime
+                    }
+                }
