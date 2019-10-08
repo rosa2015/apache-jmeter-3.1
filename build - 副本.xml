@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+  
+<project name="zhtx_chaoshi" default="report" basedir="."> 
+    <tstamp>  
+        <!--format property="time" pattern="yyyyMMddkkmm" /--> 
+        <format property="date" pattern="yyyy/MM/dd kk:mm:ss"/>
+  <!--kk是24小时制，KK是12小时制-->		
+    </tstamp> 
+    <!-- 需要改成自己本地的 Jmeter 目录-->  
+    <property name="jmeter.home" value="D:/apache-jmeter-3.1" />
+    <property name="report.title" value="掌合天下接口测试报告_线上环境"/>	
+    <!-- jmeter生成jtl格式的结果报告的路径-->  
+    <property name="jmeter.result.jtl.dir" value="D:/apache-jmeter-3.1/jtl" />  
+    <!-- jmeter生成html格式的结果报告的路径-->  
+    <property name="jmeter.result.html.dir" value="D:/apache-jmeter-3.1/html" />  
+    <!-- 生成的报告的前缀-->
+    <!-- 生成的报告的名称--> 	
+    <property name="ReportName" value="TestReport" />
+    <!--jtl的value值是D:\Jenkins\jmxReport\jtl\TestReport+yyyyMMddhhmm.jtl-->	
+	<!--html的value值是D:\Jenkins\jmxReport\html\TestReport+yyyyMMddhhmm.html-->	
+    <property name="jmeter.result.jtlName" value="${jmeter.result.jtl.dir}/${ReportName}.jtl" />  
+    <property name="jmeter.result.htmlName" value="${jmeter.result.html.dir}/${ReportName}.html" />
+
+	<!--工程根目录-->    
+        <property name="project.home" value="D:/workspace/ETAO_JF"/>    
+        <!-- 工程根名 -->    
+        <!--<property name="project.name" value="ETAO_JF"/>-->    
+        <!-- JAVA源文件路径 -->    
+        <!--<property name="src.home" value="${project.home}/src"/>-->    
+        <!-- class文件存放位置 -->    
+        <!--<property name="classes.home" value="${project.home}/classes"/>-->
+		<!-- 工程引用包 -->    
+        <property name="lib.home" value="D:/apache-jmeter-3.1/xjar"/>
+		<!--jmx文件存放位置-->
+		<property name="jmxFile" value="D:/apache-jmeter-3.1/jmx"/>
+		 
+	<!--项目初始化设置-->
+      <target name="init" description="init" >
+	  <!--删除jtl文件夹下生成的所有文件及文件夹包括空目录，但不删除根目录-->
+	     <delete verbose="true" includeemptydirs="true" >
+	        <fileset dir="${jmeter.result.jtl.dir}" >
+			      <include name="**/*" />
+		    </fileset>
+	     </delete>
+		 <!--删除html文件夹下生成的所有文件及文件夹包括空目录，但不删除根目录-->
+	     <delete>
+	        <fileset dir="${jmeter.result.html.dir}">
+			     <include name="**/*"/>
+		    </fileset>
+	     </delete>
+		 <!--<delete dir="${classes.home}"/>
+         <mkdir dir="${classes.home}"/>-->
+	  </target>
+	  
+    <target name="test" depends="init">  
+        <taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" />  
+        <jmeter jmeterhome="${jmeter.home}" resultlog="${jmeter.result.jtlName}">  
+            <!-- 声明要运行的脚本。"*.jmx"指包含此目录下的所有jmeter脚本-->  
+            <testplans dir="${jmxFile}" includes="超市订单online.jmx" />
+			<!--声明生成的jtl文件是xml格式，否则会报错 -->
+            <property name="jmeter.save.saveservice.output_format" value="xml"/>			
+        </jmeter>  
+    </target>  
+	<path id="xslt.classpath">
+	    <fileset dir="${lib.home}" includes="xalan*.jar"/>     
+        <fileset dir="${lib.home}" includes="serializer*.jar"/>
+    </path>-->
+	<!-- 编译工程所需的JAR包 -->		
+        <!--<path id="compile.classpath">    
+            <pathelement location="${classes.home}"/>  
+            <fileset dir="${lib.home}">    
+                    <include name="*.jar"/>    
+                      
+            </fileset> 
+		
+            <fileset dir="${lib.home}">    
+                <include name="*.jar"/>    
+            </fileset>    
+            <pathelement location="${project.home}/classes"/>    
+        </path>-->
+    <target name="report" depends="test" >   
+    
+        <xslt 
+		      classpathref="xslt.classpath"
+			  force="true"
+			  in="${jmeter.result.jtlName}"  
+              out="${jmeter.result.htmlName}"  
+              style="${jmeter.home}/extras/jmeter-results-detail-report_21.xsl">
+			  <param name="titleReport" expression="${report.title}"/>
+              <param name="dateReport" expression="${date}"/>			  
+         </xslt>
+        <!-- 因为上面生成报告的时候，不会将相关的图片也一起拷贝至目标目录，所以，需要手动拷贝 -->  
+        <copy todir="${jmeter.result.html.dir}">  
+            <fileset dir="${jmeter.home}/extras">  
+                <include name="collapse.png" />  
+                <include name="expand.png" />  
+            </fileset>  
+        </copy>  
+    </target>
+	<!-- 编译 -->    
+        <!--<target name="compile" depends="report">    
+            <javac srcdir="${src.home}" destdir="${classes.home}"  includeantruntime="on" debug="true"> --> 
+                <!--compilerarg line="-encoding UTF-8"/-->     
+               <!-- <classpath refid="compile.classpath"/>    
+            </javac>    
+        </target>-->
+	<!--打jar包-->  
+    <!--target name="build" depends="compile">  
+        
+		<jar destfile="antmail.jar" includes="**/*.class" basedir="${lib.home}">
+        </jar>
+    </target> -->  
+	<!--执行-->
+	<!--<target name="run" depends="compile">  -->
+        <!--<java classname="com.tools.EmaiService">--><!--类名,包名不能漏-->  
+          <!--<classpath>  
+              <path location="${project.home}/bin">
+			  </path>-->
+			  <!--类文件路径，不能加包名-->  
+          <!--</classpath>  
+          <classpath> --> 
+              <!--<fileset dir="D:\\Jenkins\\jmxReport" includes="antmail.jar"></fileset>--> 
+			  <!--依赖包,多个同理,可用通配符-->  
+              <!--<fileset dir="${lib.home}" includes="**/*.jar"></fileset>
+          </classpath>
+      </java>    
+    </target> -->
+      
+   	
+</project>  
